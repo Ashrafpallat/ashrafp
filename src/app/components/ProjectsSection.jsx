@@ -7,57 +7,57 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
+    title: "DocMate",
+    description: "A doctor finding website using MERN stack",
+    image: "/images/projects/1.1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Ashrafpallat/DocMate-front-end- ",
+    previewUrl: "https://doc-mate-front-end.vercel.app/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
+    title: "My Watches",
+    description: "E-Commerce website for selling watches using MERN and EJS",
+    image: "/images/projects/2.1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Ashrafpallat/Watches_Ecom",
+    previewUrl: "https://watches-ecom.onrender.com/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
+    title: "MERN Auth",
+    description: "User Management System using MERN stack",
+    image: "/images/projects/3.1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Ashrafpallat/MERN-CRUD-APP",
+    previewUrl: "https://mern-crud-app-frontend-qgh6.onrender.com/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
+    title: "Netflix Clone",
+    description: "Clone website of Netflix using React and Firebase",
+    image: "/images/projects/4.1.png",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Ashrafpallat/netflix-clone",
+    previewUrl: "https://www.linkedin.com/posts/ashrafpallat_react-firebase-tmdb-activity-7220045965351604227-W7ob?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIHw0gBZNw_9zGpAoBaVkM1BY5AXECCdNM",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
+    title: "Olx Clone",
+    description: "Clone website of Olx using React and Firebase",
+    image: "/images/projects/5.1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Ashrafpallat/OLX-Clone-React",
+    previewUrl: "https://www.linkedin.com/posts/ashrafpallat_reactjs-firebase-webdevelopment-activity-7236369591340261376-drJi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIHw0gBZNw_9zGpAoBaVkM1BY5AXECCdNM",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
+    title: "LinkedIn Clone",
+    description: "Clone website of LinkedIn using HTML and CSS",
+    image: "/images/projects/6.1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Ashrafpallat/LinkedIn",
+    previewUrl: "https://www.linkedin.com/posts/ashrafpallat_webabrdesigning-linkedin-html5-activity-7119203425073942529-KPQa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIHw0gBZNw_9zGpAoBaVkM1BY5AXECCdNM",
   },
 ];
 
@@ -84,7 +84,7 @@ const ProjectsSection = () => {
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      {/* <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -100,7 +100,7 @@ const ProjectsSection = () => {
           name="Mobile"
           isSelected={tag === "Mobile"}
         />
-      </div>
+      </div> */}
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
