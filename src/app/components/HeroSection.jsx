@@ -20,7 +20,7 @@ const HeroSection = () => {
               Hello, I&apos;m{" "}
             </span>
             <br></br>
-            <TypeAnimation
+            <TypeAnimation 
               sequence={[
                 "Ashraf P",
                 1000,
@@ -37,7 +37,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Web Developer / Full Stack Developr specialized in MERN Stack
+            Web Developer / Full Stack Developer specialized in MERN Stack
           </p>
           <div>
             <Link
