@@ -40,7 +40,7 @@ const Navbar = () => {
               const isActive = pathname === `/${link.path}`;
 
               return (
-                <li key={link.path} className="relative p-1">
+                <li key={link.path} className="relative py-1">
                   <Link
                     href={link.path}
                     className="px-4 py-2 rounded-lg relative text-white"
