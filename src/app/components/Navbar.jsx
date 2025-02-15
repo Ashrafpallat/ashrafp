@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import { usePathname } from "next/navigation"; // Correct hook for App Router
 
 const navLinks = [
   {
@@ -26,45 +27,32 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const pathname = usePathname(); // Corrected hook for active link highlighting
 
   return (
-    <nav className="fixed mx-auto  border-[#33353F] top-0 left-0 right-0 z-20 bg-[#121212] bg-opacity-100">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
-        >
-          {/* LOGO */}
-        </Link>
-        <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <Bars3Icon className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
-          )}
-        </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
+    <nav className="fixed left-1/2 transform -translate-x-1/2 top-4 z-20 bg-[#121212]/80 py-1 px- rounded-lg shadow-lg">
+      <div className="flex flex-col items-center">
+        {/* Menu */}
+        <div className="menu">
+        <ul className="flex space-x- text-sm sm:space-x-8 sm:text-base p-2">
+        {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <Link
+                  href={link.path}
+                  className={`px-4 py-2 rounded-lg transition duration-300 ${pathname === link.path
+                      ? "bg-white text-black font-semibold"
+                      : "text-white hover:text-gray-300"
+                    }`}
+                >
+                  {link.title}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
+
   );
 };
 
