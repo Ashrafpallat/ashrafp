@@ -9,7 +9,7 @@ export default function About() {
       <div className="container mt-22 mx-auto py-4 px-12">
         <AboutSection />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }

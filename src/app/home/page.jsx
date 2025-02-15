@@ -9,7 +9,7 @@ export default function Home() {
       <div className="container mt-24 mx-auto py-4 px-12">
         <HeroSection />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }
