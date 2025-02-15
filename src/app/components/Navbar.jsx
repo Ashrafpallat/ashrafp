@@ -5,7 +5,7 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import { usePathname } from "next/navigation"; // Correct hook for App Router
-import { motion } from "framer-motion";
+import { motion ,AnimateSharedLayout } from "framer-motion";
 
 const navLinks = [
   {
@@ -38,7 +38,6 @@ const Navbar = () => {
           <ul className="flex space-x- text-sm sm:space-x-8 sm:text-base p-2">
             {navLinks.map((link) => {
               const isActive = pathname === `/${link.path}`;
-
               return (
                 <li key={link.path} className="relative py-1">
                   <Link
@@ -47,7 +46,6 @@ const Navbar = () => {
                   >
                     {link.title}
                   </Link>
-
                   {/* Animated background rectangle */}
                   {isActive && (
                     <motion.div
