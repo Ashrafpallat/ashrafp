@@ -72,6 +72,7 @@ const HeroSection = () => {
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={400}
               height={400}
+              unoptimized
             />
           </div>
         </motion.div>
