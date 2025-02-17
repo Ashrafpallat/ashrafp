@@ -59,7 +59,7 @@ const AboutSection = () => {
         <motion.div
           initial={{ x: -100, opacity: 0 }} // Start from left
           animate={{ x: 0, opacity: 1 }} // Move to original position
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
+          transition={{ type: "spring", stiffness: 50, damping: 20 }}
           viewport={{ once: true }}
         >
         <Image src="/images/about-image.png" width={500} height={500} alt="about image" />
@@ -68,7 +68,7 @@ const AboutSection = () => {
         <motion.div
           initial={{ x: 100, opacity: 0 }} // Start from right
           animate={{ x: 0, opacity: 1 }} // Move to original position
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
+          transition={{ type: "spring", stiffness: 50, damping: 20 }}
           viewport={{ once: true }}
           className="mt-4 md:mt-0 text-left flex flex-col h-full"
         >
