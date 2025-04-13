@@ -25,6 +25,15 @@ const projectsData = [
   },
   {
     id: 3,
+    title: "SHORT LINK",
+    description: "Dynamic URL Shortner Built Using MERN Stack and Tailwind CSS",
+    image: "/images/projects/short-link.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Ashrafpallat/Short-Link-Frontend",
+    previewUrl: "https://short-link-frontend-dusky.vercel.app/",
+  },
+  { 
+    id: 3,
     title: "MERN Auth",
     description: "User Management System using MERN stack",
     image: "/images/projects/3.1.png",
@@ -50,15 +59,15 @@ const projectsData = [
     gitUrl: "https://github.com/Ashrafpallat/OLX-Clone-React",
     previewUrl: "https://www.linkedin.com/posts/ashrafpallat_reactjs-firebase-webdevelopment-activity-7236369591340261376-drJi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIHw0gBZNw_9zGpAoBaVkM1BY5AXECCdNM",
   },
-  {
-    id: 6,
-    title: "LinkedIn Clone",
-    description: "Clone website of LinkedIn using HTML and CSS",
-    image: "/images/projects/6.1.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/Ashrafpallat/LinkedIn",
-    previewUrl: "https://www.linkedin.com/posts/ashrafpallat_webabrdesigning-linkedin-html5-activity-7119203425073942529-KPQa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIHw0gBZNw_9zGpAoBaVkM1BY5AXECCdNM",
-  },
+  // {
+  //   id: 6,
+  //   title: "LinkedIn Clone",
+  //   description: "Clone website of LinkedIn using HTML and CSS",
+  //   image: "/images/projects/6.1.png",
+  //   tag: ["All", "Web"],
+  //   gitUrl: "https://github.com/Ashrafpallat/LinkedIn",
+  //   previewUrl: "https://www.linkedin.com/posts/ashrafpallat_webabrdesigning-linkedin-html5-activity-7119203425073942529-KPQa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIHw0gBZNw_9zGpAoBaVkM1BY5AXECCdNM",
+  // },
 ];
 
 const ProjectsSection = () => {
